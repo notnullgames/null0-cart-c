@@ -140,7 +140,7 @@ export async function loadCart(bytes, canvas=document.body.appendChild(document.
   if (exports.update) {
     const updateLoop = t => {
       exports.update(t)
-      // requestAnimationFrame(updateLoop)
+      requestAnimationFrame(updateLoop)
     }
     requestAnimationFrame(updateLoop)
   }
