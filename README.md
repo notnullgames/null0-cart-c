@@ -11,4 +11,4 @@ docker run -it -v $(pwd):/cart konsumer/null0 make
 
 ## github
 
-This repo has a Github Actions setup to build a demo-site for you, and publish.
+This repo has a Github Actions setup to build a demo-site for you, and publish, [here](https://notnullgames.github.io/null0-cart-c/).
