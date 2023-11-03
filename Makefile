@@ -17,8 +17,9 @@ ${GAME}.null0: ${GAME}.wasm
 
 run: ## Run a local webserver to test out your game
 	# TODO: curl index.html from a remote location, later
-	# TODO: watch source for change, and rebuild
+	@mkdir -p build
 	@cp index.html build && npx -y live-server build
 
 watch: ## Rebuild if files change
+	@mkdir -p build
 	@npx -y nodemon --exec "make cart" --watch src  -e "c h png jpg ttf"

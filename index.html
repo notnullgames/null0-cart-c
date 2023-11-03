@@ -121,6 +121,12 @@ export async function loadCart(bytes, canvas=document.body.appendChild(document.
         }
         ctx.drawImage(resources[src], posX, posY)
       }
+    },
+
+    wasi_snapshot_preview1: {
+      proc_exit () {
+        console.error('exit requested.')
+      }
     }
   }
 
