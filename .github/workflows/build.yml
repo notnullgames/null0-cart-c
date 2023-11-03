@@ -29,11 +29,11 @@ jobs:
         uses: ./.github/actions/build
         with:
           name: 'mygame'
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ steps.build.outputs.name }}.null0
-          path: ${{ github.workspace }}
+      # - name: Upload Build Artifacts
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: ${{ steps.build.outputs.name }}.null0
+      #     path: ${{ github.workspace }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
