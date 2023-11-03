@@ -3,6 +3,12 @@
 This is a quickstart-template for [null0](https://notnullgames.vercel.app/null0). Use it to quickly create your game.
 
 - To get info run `make`.
-- Use docker for a complete setup, with no need for any local tools installed: `docker run -it -v $(pwd):/cart konsumer/null0 make`
+- Use docker for a complete setup, with no need for any local tools installed:
 
-Because it's built into docs/ and that is set to be the Github-pages root, it will build a demo website [here](https://notnullgames.github.io/null0-cart-c/).
+```
+docker run -it -v $(pwd):/cart konsumer/null0 make
+```
+
+## github
+
+This repo has some Github Actions setup to build a demo-site for you, and add artifacts to your action-runs (so it will build your null0 cart on push.)
