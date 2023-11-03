@@ -1,4 +1,4 @@
-GAME='mygame'
+GAME ?= 'mygame'
 
 CC_WASM = clang --target=wasm32-wasi --sysroot=${WASI_SYSROOT} -Oz -I src
 

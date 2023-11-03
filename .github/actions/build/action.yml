@@ -1,11 +1,13 @@
-# action.yml
 name: 'Build null0 C cart'
 description: 'Build a C-based cart in Github Action'
 inputs:
-  name:  # The name of your cart
+  name:
     description: 'The name of your cart'
     required: true
     default: 'mygame'
+outputs:
+  name:
+    description: 'The name of your cart that was used'
 runs:
   using: 'docker'
   image: 'Dockerfile'
