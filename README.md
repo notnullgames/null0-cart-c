@@ -11,4 +11,4 @@ docker run -it -v $(pwd):/cart konsumer/null0 make
 
 ## github
 
-This repo has some Github Actions setup to build a demo-site for you, and add artifacts to your action-runs (so it will build your null0 cart on push.)
+This repo has a Github Actions setup to build a demo-site for you, and publish.

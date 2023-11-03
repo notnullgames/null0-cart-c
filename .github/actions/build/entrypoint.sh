@@ -5,6 +5,6 @@
 
 export GAME="${1}"
 make cart
-cp index.html docs
+cp index.html build
 
 echo "name=${GAME}" >> $GITHUB_OUTPUT

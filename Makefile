@@ -9,16 +9,16 @@ help: ## Show this help
 cart: ${GAME}.null0 ## Build your cart
 
 ${GAME}.wasm: src/main.c
-	@mkdir -p docs
-	@${CC_WASM} src/main.c -o docs/${GAME}.wasm
+	@mkdir -p build
+	@${CC_WASM} src/main.c -o build/${GAME}.wasm
 
 ${GAME}.null0: ${GAME}.wasm
-	@cd docs && cp $? main.wasm && zip -r $@ main.wasm && rm main.wasm && cd ../src && zip ../docs/$@ -r . -x *.h -x *.c -x .DS_Store
+	@cd build && cp $? main.wasm && zip -r $@ main.wasm && rm main.wasm && cd ../src && zip ../build/$@ -r . -x *.h -x *.c -x .DS_Store
 
 run: ## Run a local webserver to test out your game
 	# TODO: curl index.html from a remote location, later
 	# TODO: watch source for change, and rebuild
-	@cp index.html docs && npx -y live-server docs
+	@cp index.html build && npx -y live-server build
 
 watch: ## Rebuild if files change
 	@npx -y nodemon --exec "make cart" --watch src  -e "c h png jpg ttf"
