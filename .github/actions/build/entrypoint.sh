@@ -7,4 +7,4 @@ export GAME="${1}"
 make cart
 cp index.html docs
 
-echo "name=$GAME}" >> $GITHUB_OUTPUT
+echo "name=${GAME}" >> $GITHUB_OUTPUT
